@@ -1,0 +1,22 @@
+.dragon{
+  cursor: pointer;
+  border-radius: 50px;
+}
+.dragonball{
+  font-family: Saiyan-Sans, serif;
+  font-size: 150px;
+
+}
+.dragoni{
+  color:#FFEA00;
+  font-family: Saiyan-Sans, serif;
+  font-size: 150px;
+  -webkit-text-stroke: 3px black;
+}
+.ball{
+  color:#FF0000;
+  font-family: Saiyan-Sans, serif;
+  font-size: 150px;
+  -webkit-text-stroke: 3px black;
+
+}

@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-6 offset-3 my-3 " >
+    <div class="card shadow h-100">
+      <div class="card-header">
+        <div class="card-img"><img src="{{agentInfo.displayIcon}}" alt="" style="height: 1em;margin-bottom: 5px;"> </div>
+        <h3>{{agentInfo.displayName}} </h3>
+      </div>
+      <img [src]="agentInfo.fullPortrait?agentInfo.fullPortrait:'assets/chap.jpg'" alt="" class="card-img " >
+
+      <div class="card-body ">
+        <p><strong>id : </strong> {{agentInfo.uuid}}</p>
+        <p><strong>Role : </strong> {{agentInfo.role?.displayName?agentInfo.role?.displayName:'noun'}}</p>
+        <p><strong>Role description : </strong> {{agentInfo.role?.description?agentInfo.role?.description:'noun'}}</p>
+
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <strong>Abilities : </strong>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" *ngFor="let ab of agentInfo.abilities"  >{{ab.description}} </div>
+
+
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <strong>Description : </strong>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">{{agentInfo.description?agentInfo.description:'noun'}}</div>
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="card-footer">
+        <small>is Available For Test : {{agentInfo.isAvailableForTest}}</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

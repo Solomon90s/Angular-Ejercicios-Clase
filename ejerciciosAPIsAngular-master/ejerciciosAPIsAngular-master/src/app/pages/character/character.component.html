@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-3 shadow  my-row">
+    <div class="col shadow p-3 mb-5 bg-body-tertiary rounded p-3  bg-opacity-50 border border-info border-start-0 rounded-end">numero: {{infoAPI.length}}</div>
+  </div>
+  <div class="row d-flex justify-content-between">
+    <div class="col-12 col-md-3 my-3 mx-3 my-card " *ngFor="let char of infoAPI">
+      <div class="card h-100 " [routerLink]="'/card/'+char.id" >
+        <div class="card-header">
+          <h3> {{char.name}} </h3>
+        </div>
+        <img [src]="char.img_url" alt="" class="card-img">
+<!--        <div class="card-body">-->
+<!--          <p><strong>ID : </strong> {{char.id}}</p>-->
+<!--          <p><strong>Gender : </strong> {{char.gender}}</p>-->
+<!--          <p><strong>Hair : </strong> {{char.hair}}</p>-->
+<!--          <p><strong>Ability : </strong></p>-->
+<!--          <p *ngFor="let ab of char.abilities"  >{{ab}}  </p>-->
+<!--        </div>-->
+        <div class="card-footer">
+          <small>Origin : {{char.origin}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

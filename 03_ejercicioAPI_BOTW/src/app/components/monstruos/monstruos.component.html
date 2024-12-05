@@ -1,0 +1,16 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row" *ngIf="monstruos">
+  <h1 class="my-5 p-5 miH1">Hay un total de {{monstruos.length}} monstruos en el Zelda Botw</h1>
+  <div class="col-lg-3 col-xl-3" *ngFor="let mons of monstruos;">
+    <div class="card my-3 miCard" style="width: 18rem;" [routerLink]="'/detail-monstruos/'+mons.id">
+      <img [src]="mons.image" class="card-img-top img-fluid" [alt]="mons.name">
+      <div class="card-body bg-secondary-subtle">
+        <div class="card-title">
+        <h3 class="text-primary text-uppercase text-center">{{mons.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

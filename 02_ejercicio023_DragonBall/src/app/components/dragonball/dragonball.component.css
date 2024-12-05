@@ -1,0 +1,18 @@
+.img-card:hover{
+  transform: scale(105%);
+  transition-duration: 750ms;
+}
+.human{
+  color: green;
+}
+.noHuman{
+  color: darkmagenta;
+}
+
+.redirec:hover{
+  cursor: pointer;
+}
+.img-card{
+  width: 280px;
+  height: 560px;
+}

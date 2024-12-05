@@ -1,0 +1,14 @@
+<div class="row" *ngIf="criaturas">
+    <h1 class="my-5 p-5 miH1 text-uppercase">Hay un total de {{criaturas.length}} criaturas en el zelda botw</h1>
+    <div class="col-lg-3 col-xl-3" *ngFor="let cria of criaturas;">
+        <div class="card my-3 miCard" style="width: 18rem;" [routerLink]="'/detail-criaturas/'+cria.id">
+          <div class="card-body bg-body-secondary">
+            <div class="card-title">
+              <h3 class="text-primary text-uppercase text-center">{{cria.name}}</h3>
+            </div>
+          </div>
+            <img [src]="cria.image" class="card-img-bottom img-fluid" [alt]="cria.name">
+        </div>
+    </div>
+</div>
+

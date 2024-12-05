@@ -1,0 +1,14 @@
+<div class="row" *ngIf="materials">
+  <h1 class="my-5 p-5 miH1 text-uppercase">Hay un material total de {{materials.length}} elementos en el zelda botw</h1>
+  <div class="col-lg-3 col-xl-3" *ngFor="let mat of materials;">
+    <div class="card my-3 miCard" style="width: 18rem;" [routerLink]="'/detail-materiales/'+mat.id">
+      <img [src]="mat.image" class="card-img-top img-fluid" [alt]="mat.name">
+      <div class="card-body bg-body-secondary">
+        <div class="card-title">
+          <h3 class="text-primary text-uppercase text-center">{{mat.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

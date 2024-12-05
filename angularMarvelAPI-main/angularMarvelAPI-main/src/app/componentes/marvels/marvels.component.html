@@ -1,0 +1,15 @@
+<div class="row my-3">
+  <div class="col-md-4  col-12 my-3" *ngFor="let marvel of infoMarvel.data.results">
+
+    <div class="card  h-100" [routerLink]="'/getOne/'+marvel.id" >
+      <div class="card-body">
+        <h5 class="card-title">{{marvel.title}}</h5>
+        <img [src]="marvel.images[0]?marvel.images[0].path+'.jpg':'assets/img/image-not-found.jpg'" class="card-img-bottom" [alt]="marvel.title">
+
+
+      </div>
+      </div>
+
+
+  </div>
+</div>

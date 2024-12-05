@@ -1,0 +1,16 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row mt-3">
+  <div class="col-lg-3 col-xxl-3 my-3" *ngFor="let agent of agents;">
+    <div class="card text-bg-dark miCard" [routerLink]="'/info-valorant/'+agent.uuid">
+      <img [src]="agent.background" class="card-img" [alt]="agent.displayName">
+      <div class="card-img-overlay">
+        <div class="row justify-content-center mirow align-items-center">
+          <div class="col-5">
+            <img [src]="agent.displayIcon" class="card-img-top" [alt]="agent.displayName">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

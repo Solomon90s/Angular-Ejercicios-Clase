@@ -1,0 +1,11 @@
+img{
+  width: 25em;
+  transition: ease-in-out 1s;
+}
+
+img:hover{
+  cursor: pointer;
+  transform: scale(105%) ;
+
+  box-shadow: 1px 1px 1px 1px blue ,-1px -1px 1px 1px blue  ;
+}

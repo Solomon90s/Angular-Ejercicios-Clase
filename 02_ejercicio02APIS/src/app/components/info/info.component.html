@@ -1,0 +1,20 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<h1 *ngIf="dataApi">Hay un total de {{dataApi.data.length}} personajes en esta API</h1>
+<div class="row" *ngIf="dataApi">
+  <div class="col-lg-3" *ngFor="let char of dataApi.data; let i = index">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h3 class="text-primary">{{char.displayName}}</h3>
+        </div>
+      </div>
+      <img [src]="char.displayIcon" class="card-img-top" alt="">
+      <div class="card-body">
+        <p><strong>UUID: </strong>{{char.uuid}}</p>
+        <p><strong>Description : </strong>{{char.description}}</p>
+        <p><strong>DeveloperName: </strong>{{char.developerName}}</p>
+        <p><strong>Asset patch: </strong>{{char.assetPath}}</p>
+      </div>
+    </div>
+  </div>
+</div>

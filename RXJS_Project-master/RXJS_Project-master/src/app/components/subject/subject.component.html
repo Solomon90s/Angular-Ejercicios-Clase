@@ -1,0 +1,12 @@
+
+<div class="flex justify-center">
+    <button class="bg-green-500 hover:bg-green-700 text-white font-bold
+      py-2 px-4 rounded m-5 " (click)="mySubject.next(lista[Math.floor(Math.random()*4)])">
+  <!--Emitimos un valor con el observer cada vez que sea haga click al botón-->
+        Click me! Soy un subject!
+    </button>
+</div>
+<div class="flex justify-center font-bold">
+    {{mySubject | async}}
+</div>
+

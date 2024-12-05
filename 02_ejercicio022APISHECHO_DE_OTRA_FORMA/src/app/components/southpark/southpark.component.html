@@ -1,0 +1,19 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row mt-5" *ngIf="characters">
+  <div class="col-lg-3 col-xl-3 g-lg-3 g-xl-3" *ngFor="let char of characters;">
+    <div class="card mt-5 miCard">
+      <div class="card-header p-2">
+        <div class="card-title text-center text-uppercase">
+          <h3 class="text-primary">{{char.name}}</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <p><strong>Name: </strong>{{char.name}}</p>
+        <p><strong>Sex: </strong>{{char.sex}}</p>
+        <p><strong>Religion: </strong>{{char.religion}}</p>
+        <p><strong>Occupation: </strong>{{char.occupation}}</p>
+        <p><strong>Created: </strong>{{char.created_at}}</p>
+      </div>
+    </div>
+  </div>
+</div>

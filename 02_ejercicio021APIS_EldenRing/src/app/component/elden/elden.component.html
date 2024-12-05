@@ -1,0 +1,37 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="d-flex justify-content-end my-4">
+  <div>
+    <!-- Llamamos a la pagination con, <ngb-pagination</ngb-pagination>-->
+    <!-- BANANA ON THE BOX, [()], doble enlace de datos. Voy a vincular la variable page(que tengo en el typescript), con el objeto ngb-pagination.-->
+    <!-- BANANA ON THE BOX, [()], Cuando yo modifique el HTML se modificará el valor en el typescript y viceversa  .-->
+
+    <!-- [(page)] = "page", que lo vinculamos con nuestra variable page -->
+    <!-- [pageSize]="20", tamaño de pagina-->
+    <!-- [collectionSize]="dataApi.info.count", donde cogemos la información-->
+    <!-- [maxSize]="3", numero total de elementos que voy a poner de corrido -->
+    <!-- [rotate]="true", -->
+    <!-- [boundaryLinks] ="true", flechas de avanzar e ir atras-->
+    <!-- (pageChange)="loadCharacters()">,el evento (pageChange) llama a la función loadCharacters() y muestra los nuevos elementos-->
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="limit"
+      [collectionSize]="dataApi.total"
+      [maxSize]="3"
+      [rotate]="true"
+      [boundaryLinks] ="true"
+      (pageChange)="loadBossesEldenRing()">
+    </ngb-pagination>
+  </div>
+</div>
+<div class="row" *ngIf="dataApi">
+  <div class="col-lg-3" *ngFor="let elden of dataApi.data;">
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="card-title">
+          <h3 class="text-primary text-uppercase text-center">{{elden.name}}</h3>
+        </div>
+      </div>
+      <img [src]="elden.image ? elden.image : 'assets/Image-not-found.png'" class="card-img-top rounded imagen" [routerLink]="'/detail-elden/'+elden.id" alt="imagen">
+    </div>
+  </div>
+</div>

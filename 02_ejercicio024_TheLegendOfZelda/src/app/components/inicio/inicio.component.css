@@ -1,0 +1,13 @@
+.zelda {
+  cursor: pointer;
+  border-radius: 35px;
+
+}
+
+.parrafo {
+  font-family: "The Wild Breath of Zelda", serif;
+  font-weight: bolder;
+  font-size: 75px;
+  color: #917f04;
+  letter-spacing: 2px;
+}

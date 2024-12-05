@@ -1,0 +1,18 @@
+<div class="row my-3 justify-content-center">
+  <div class="col-lg-6 col-xxl-6 my-2" *ngIf="agent">
+    <div class="card sombra">
+      <div class="card-header bg-secondary-subtle">
+        <div class="card-title">
+          <h3 class="text-primary text-center">{{ agent.displayName }}</h3>
+        </div>
+      </div>
+      <img [src]="agent.displayIcon" class="card-img-top p-1 bg-primary-subtle">
+      <div class="card-body bg-secondary-subtle">
+        <p><strong>Display Name: </strong>{{ agent.displayName }}</p>
+        <p><strong>Asset: </strong>{{ agent.assetPath }}</p>
+        <p><strong>Description: </strong>{{ agent.description }}</p>
+        <p><strong>Developer Name: </strong>{{ agent.developerName }}</p>
+      </div>
+    </div>
+  </div>
+</div>

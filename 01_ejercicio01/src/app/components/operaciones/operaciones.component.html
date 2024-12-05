@@ -1,0 +1,14 @@
+<p>
+  <button (click)="realizarOperacion(oper.operacion)" *ngFor="let oper of operaciones">{{oper.simbolo}}</button>
+</p>
+
+<table>
+  <tr *ngFor="let x of operandos; let i = index">
+    <td>{{x}}</td>
+    <td>{{x}}</td>
+    <td>{{resultado[i]}}</td>
+  </tr>
+</table>
+
+
+

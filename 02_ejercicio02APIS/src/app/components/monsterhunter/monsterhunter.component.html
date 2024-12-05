@@ -1,0 +1,42 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row mt-3" *ngIf="loadData else cargando">
+  <div class="col-6 offset-3">
+    <ngb-pagination
+      [(page)] = "page"
+      [pageSize]="pageSize"
+      [collectionSize]="totalCount"
+      [maxSize]="5"
+      [boundaryLinks] = "true"
+      [rotate] = "true"
+      (pageChange)="loadWeapons()">
+    </ngb-pagination>
+    <span class="ms-2">
+        Page size
+      </span>
+    <select class="form-select" (change)="pageSizeChange($event)">
+      <option value="12">12</option>
+      <option value="16">16</option>
+      <option value="20">20</option>
+      <option value="24">24</option>
+      <option value="28">28</option>
+    </select>
+  </div>
+  <div class="col-3"></div>
+  <div class="col-lg-3 col-xxl-3" *ngFor="let weapon of weapons">
+    <div class="card mt-5 miCard" [routerLink]="'/info-monster/'+weapon.id">
+      <div class="card-header text-center bg-secondary-subtle">
+        <div class="card-title">
+          <h3 class="text-primary">{{weapon.name}}</h3>
+        </div>
+      </div>
+      <img [src]="weapon.assets.image" class="card-img-top" alt="">
+    </div>
+  </div>
+</div>
+<ng-template #cargando>
+  <div class="d-flex justify-content-center align-items-center myHeigh my-2">
+    <div class="spinner-border text-danger" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+</ng-template>

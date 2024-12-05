@@ -1,0 +1,15 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+  <div class="row" *ngIf="characters">
+    <div class="col-lg-3" *ngFor="let char of characters;">
+      <div class="card my-3 miCard" [routerLink]="'/info-finalspace/'+char.id">
+        <div class="card-header text-center bg-secondary-subtle">
+          <div class="card-title">
+            <h3 class="text-primary">{{char.name}}</h3>
+          </div>
+        </div>
+        <img [src]="char.img_url" class="card-img-top img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
+

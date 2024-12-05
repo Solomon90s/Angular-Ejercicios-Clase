@@ -1,0 +1,19 @@
+.figure:hover{
+  cursor: pointer;
+  transform: scale(105%);
+  transition-duration: 0.75s;
+  transition-timing-function: ease-in;
+}
+.img{
+  border-radius: 10%;
+  box-shadow: darkgrey 2px 2px 2px!important;
+}
+.miH1{
+  font-family: "The Wild Breath of Zelda", serif;
+  font-size: 75px;
+  color: #917f04;
+}
+
+
+
+

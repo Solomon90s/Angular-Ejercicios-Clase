@@ -1,0 +1,20 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row" *ngIf="dataApi">
+  <div class="col-lg-3" *ngFor="let elden of dataApi.data;">
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="card-title">
+          <h3 class="text-primary">{{elden.name}}</h3>
+        </div>
+      </div>
+      <img [src]="elden.image" class="card-img-top img-fluid" alt="imagen">
+      <div class="card-body">
+        <p><strong>Description: </strong>{{elden.description}}</p>
+        <p><strong>Location: </strong>{{elden.location}}</p>
+        <p><strong>Region: </strong>{{elden.region}}</p>
+        <p><strong>Health Points: </strong>{{elden.healthPoints}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="row my-3 justify-content-center">
+  <div class="col-lg-6 col-xxl-6 my-2" *ngIf="character">
+    <h1 class="text-center">{{title}}</h1>
+    <div class="card miCard">
+      <div class="card-header bg-secondary-subtle">
+        <div class="card-title">
+          <h3 class="text-primary text-center">{{ character.name }}</h3>
+        </div>
+      </div>
+      <img [src]="character.img_url" class="card-img-top p-1 card-img-top img-fluid" [alt]="character.name">
+      <div class="card-body bg-secondary-subtle text-center">
+        <p><strong>Gender: </strong>{{ character.gender }}</p>
+        <p><strong>Species: </strong>{{ character.species }}</p>
+        <p><strong>Status: </strong>{{ character.status }}</p>
+        <p><strong>Origin: </strong>{{ character.origin }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-3 col-xxl-3 text-center my-3">
+    <button class=" btn btn-outline-primary miBoton" (click)="anterior()">
+      Anterior
+    </button>
+  </div>
+  <div class="col-lg-3 col-xxl-3 text-center my-3">
+    <button class=" btn btn-outline-danger miBoton" (click)="siguiente()">
+      Siguiente
+    </button>
+  </div>
+</div>

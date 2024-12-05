@@ -1,0 +1,21 @@
+<div class="row my-5">
+  <div class="col-xl-3 col-xxl-3 columna" *ngFor="let data of dataApi" [routerLink]="'/detalles/'+data.id">
+    <div class="card miCard">
+      <div class="card-header">
+        <div class="card-title text-center">
+          <h3 class="text-primary">{{data.name}}</h3>
+        </div>
+      </div>
+      <img [src]="data.image" alt="" class="card-img-top">
+      <div class="card-body">
+        <p class="card-text">
+          {{data.description}}
+        </p>
+        <h6 class="text-center text-uppercase text-danger-emphasis">Location</h6>
+        <p class="card-text text-center">
+          {{data.common_locations}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

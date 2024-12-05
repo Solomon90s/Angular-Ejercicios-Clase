@@ -1,0 +1,19 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row mt-5" *ngIf="character">
+  <div class="col-lg-2 col-xl-2">
+    <div class="card mt-3 bg-dark text-white">
+      <div class="card-header text-center text-uppercase">{{ character.name }}</div>
+      <img [src]="character.image" class="card-img-top img-fluid img-card imagen" alt="imagen">
+    </div>
+  </div>
+  <div class="col-lg-10 col-xl-10">
+    <div class="card mt-3 bg-dark text-white">
+      <div class="card-body">
+        <p class="card-text text-center">Descripción: <br>{{ character.description }}</p>
+        <p class="card-text text-center">Raza: {{ character.race }}</p>
+        <p class="card-text text-center">Ki: {{ character.ki }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

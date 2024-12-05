@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col shadow p-3 mb-5 bg-body-tertiary rounded p-3  bg-opacity-50 border border-info border-start-0 rounded-end"> Total Count: {{infoAPI.totalCount}}</div>
+  </div>
+  <div class="row">
+
+
+
+
+
+
+    <div class="col-12 col-md-4 my-3 " *ngFor="let card of infoAPI.data ; let i = index">
+
+
+
+      <div class="card h-100" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal' + i" >
+        <div class="card-header">
+          <h3> {{card.name}} </h3>
+        </div>
+        <img src="{{card.images.large}}" alt="" class="card-img">
+        <div class="card-body">
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" [attr.id]="'exampleModal' + i" tabindex="-1" [attr.aria-labelledby]="'exampleModalLabel' + i" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" [attr.id]="'exampleModalLabel'+i">{{card.name}} </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="{{card.images.large}}" alt="" class="card-img">
+                <p><strong>ID : </strong> {{card.id}}</p>
+                <p><strong>Artist : </strong> {{card.artist}}</p>
+                <p><strong>High Power : </strong> {{card.hp}}</p>
+                <p><strong>Ability : </strong> <br>
+                <ul>
+                  <li *ngFor="let ab of card.abilities">{{ab.name?ab.name:'fadfasdf'}}</li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

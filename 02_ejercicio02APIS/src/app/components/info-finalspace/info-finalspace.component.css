@@ -1,0 +1,9 @@
+.miCard{
+  border: solid 5px;
+  /*border-image: radial-gradient(#f1eeee, #232d28)15;*/
+  border-image: linear-gradient(25deg, #ec4242, #c3fac3, #00000a)15;
+  box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.75);
+}
+.miBoton{
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.75);
+}

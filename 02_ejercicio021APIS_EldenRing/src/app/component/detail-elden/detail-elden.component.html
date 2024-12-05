@@ -1,0 +1,17 @@
+<div class="row my-3 justify-content-center">
+  <div class="col-lg-6 col-xxl-6 my-2" *ngIf="boss">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h3 class="text-primary text-uppercase text-center">{{boss.name}}</h3>
+        </div>
+      </div>
+      <img [src]="boss.image ? boss.image : 'assets/Image-not-found.png'" class="card-img-top" [alt]="boss.name">
+      <div class="card-body">
+        <p class="card-text text-center">Description: <br>{{boss.description}}</p>
+        <p class="card-text text-center">Location: <br>{{boss.location}}</p>
+        <p class="card-text text-center">Drops: <br>{{boss.drops[0]}}</p>
+      </div>
+    </div>
+  </div>
+</div>

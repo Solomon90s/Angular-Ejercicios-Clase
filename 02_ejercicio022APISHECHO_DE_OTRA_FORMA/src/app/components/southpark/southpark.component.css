@@ -1,0 +1,5 @@
+.miCard:hover{
+  transform: scale(110%);
+  transition-duration: 0.85s;
+  border: solid 2px yellow;
+}

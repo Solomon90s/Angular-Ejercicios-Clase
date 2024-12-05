@@ -1,0 +1,30 @@
+<div class="row my-3 justify-content-center">
+  <div class="col-lg-6 col-xxl-6 my-2" *ngIf="weapon">
+    <div class="card sombra">
+      <div class="card-header bg-secondary-subtle">
+        <div class="card-title">
+          <h3 class="text-primary text-center">{{ weapon.name }}</h3>
+        </div>
+      </div>
+      <img [src]="weapon.assets.image" class="card-img-top p-1 bg-primary-subtle img-fluid" [alt]="weapon.name">
+      <div class="card-body">
+        <p><strong>Name: </strong>{{ weapon.name }}</p>
+        <p><strong>Type: </strong>{{ weapon.type }}</p>
+        <p><strong>Damage type: </strong>{{ weapon.damageType }}</p>
+        <p><strong>Rarity: </strong>{{ weapon.rarity }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-3 col-xxl-3 text-center my-3">
+      <button class=" btn btn-outline-primary miBoton" (click)="anterior()">
+        Anterior
+      </button>
+    </div>
+    <div class="col-lg-3 col-xxl-3 text-center my-3">
+      <button class=" btn btn-outline-danger miBoton" (click)="siguiente()">
+        Siguiente
+      </button>
+    </div>
+  </div>
+</div>

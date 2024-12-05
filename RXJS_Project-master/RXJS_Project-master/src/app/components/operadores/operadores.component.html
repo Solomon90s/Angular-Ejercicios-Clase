@@ -1,0 +1,22 @@
+<div class="container">
+  <h1 class="text-4xl text-blue-700 mt-3">Map</h1>
+  <ul>
+    <li class="list-image-none" *ngFor="let m of coleccionMap">{{m}}</li>
+  </ul>
+  <h1 class="text-4xl text-green-600 mt-3">Filter</h1>
+  <ul>
+    <li class="list-image-none" *ngFor="let f of coleccionFilter">{{f}}</li>
+  </ul>
+  <h1 class="text-4xl text-purple-900 mt-3">Reduce</h1>
+  <ul>
+    <li class="list-image-none">{{solucionReduce}}</li>
+  </ul>
+  <h1 class="text-4xl text-pink-700 mt-3">Merge</h1>
+  <ul>
+    <li class="list-image-none" *ngFor="let mer of coleccionMerge">{{mer}}</li>
+  </ul>
+  <h1 class="text-4xl text-orange-900 mt-3">Concat</h1>
+  <ul>
+    <li class="list-image-none" *ngFor="let con of coleccionConcat">{{con}}</li>
+  </ul>
+</div>

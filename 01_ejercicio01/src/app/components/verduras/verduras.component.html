@@ -1,0 +1,11 @@
+<p>
+  <button (click)="cargarVerdura(verdura)" *ngFor="let verdura of verduras" [style]="'color:'+verdura.color">{{verdura.nombre}}</button>
+</p>
+
+<div class="tarjeta">
+  <h3>
+    {{miVerdura.nombre}}
+  </h3>
+  <p [style]="'color:'+miVerdura.color">{{miVerdura.color}}</p>
+  <p>{{miVerdura.peso}}</p>
+</div>

@@ -1,0 +1,17 @@
+<!--Contenido que a veces puede estar renderizado y a veces no (ng-container o ng-template)-->
+<ng-container *ngIf="data$ | async as character">
+  <h1 class="m-5 text-3xl font-bold text-center text-green-900">
+    {{character.name}}
+  </h1>
+  <div  class="flex justify-center">
+  <img [src]="character.image" class="border border-green-500" alt="">
+  </div>
+</ng-container>
+<ng-container *ngIf="data$ | async as character">
+  <h1 class="m-5 text-3xl font-bold text-center text-green-900">
+    {{character.name}}
+  </h1>
+  <div  class="flex justify-center">
+    <img [src]="character.image" class="border border-green-500"  alt="">
+  </div>
+</ng-container>

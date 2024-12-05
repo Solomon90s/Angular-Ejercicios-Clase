@@ -1,0 +1,11 @@
+.img:hover {
+  cursor: pointer;
+  transform: scale(105%);
+  transition-duration: 0.75s;
+
+}
+.img{
+  border-radius: 15%;
+  box-shadow: 5px 2px 2px 5px #2d2d2d;
+}
+

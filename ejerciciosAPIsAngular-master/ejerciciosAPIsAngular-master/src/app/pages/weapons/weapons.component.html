@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col shadow p-3 mb-5 bg-body-tertiary rounded p-3  bg-opacity-50 border border-info border-start-0 rounded-end">numeros: {{infoAPI.length}}</div>
+  </div>
+  <div class="row box-wrap">
+
+    <div class="col-12 col-md-3 my-3 mx-1 box" *ngFor="let weapon of infoAPI">
+      <div class="card h-100 " [routerLink]="'/weapon/'+ weapon.id" >
+        <div class="card-header">
+          <h3> {{weapon.name}} </h3>
+        </div>
+        <img [src]="weapon.assets?.image?weapon.assets?.image:'assets/chap.jpg'" alt="" class="card-img">
+<!--        <div class="card-body">-->
+<!--          <p><strong>ID : </strong> {{weapon.id?weapon.id:'noun'}}</p>-->
+<!--          <p><strong>TYPE : </strong> {{weapon.type?weapon.type:'noun'}}</p>-->
+<!--          <p><strong>Damage Type : </strong> {{weapon.damageType?weapon.damageType:'noun'}}</p>-->
+<!--          <p><strong>Ability : </strong></p>-->
+<!--          <ul>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials"> ID :{{crafting.item.id?crafting.item.id:'Unknown'}}</li>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials">Rarity : {{crafting.item.rarity? crafting.item.rarity : 'Unknown'}}</li>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials">Carry Limit : {{crafting.item.carryLimit?crafting.item.carryLimit:'Unknown'}}</li>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials">Value : {{crafting.item.value?crafting.item.value:'Unknown'}}</li>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials">Name : {{crafting.item.name?crafting.item.name:'Unknown'}}</li>-->
+<!--            <li *ngFor="let crafting of weapon.crafting.craftingMaterials">Description : {{crafting.item.description? crafting.item.description: 'Unknown'}}</li>-->
+<!--          </ul>-->
+
+<!--        </div>-->
+        <div class="card-footer">
+          <small>Attack: {{weapon.attack.display}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

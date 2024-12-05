@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row mt-3">
+
+  <div class="row">
+
+        <div class="card offset-4 w-25 ">
+        <div class="card-header">
+          <h3> {{oneWeapon.name}} </h3>
+        </div>
+          <div class="card-img" ><img [src]="oneWeapon.assets?.image?oneWeapon.assets?.image:'assets/chap.jpg'" alt="" ></div>
+
+        <div class="card-body">
+          <p><strong>ID : </strong> {{oneWeapon.id?oneWeapon.id:'noun'}}</p>
+          <p><strong>TYPE : </strong> {{oneWeapon.type?oneWeapon.type:'noun'}}</p>
+          <p><strong>Damage Type : </strong> {{oneWeapon.damageType?oneWeapon.damageType:'noun'}}</p>
+          <p><strong>Ability : </strong></p>
+          <ul>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials"> ID :{{crafting.item.id?crafting.item.id:'Unknown'}}</li>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials">Rarity : {{crafting.item.rarity? crafting.item.rarity : 'Unknown'}}</li>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials">Carry Limit : {{crafting.item.carryLimit?crafting.item.carryLimit:'Unknown'}}</li>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials">Value : {{crafting.item.value?crafting.item.value:'Unknown'}}</li>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials">Name : {{crafting.item.name?crafting.item.name:'Unknown'}}</li>
+            <li *ngFor="let crafting of oneWeapon.crafting.craftingMaterials">Description : {{crafting.item.description? crafting.item.description: 'Unknown'}}</li>
+          </ul>
+
+        </div>
+        <div class="card-footer">
+          <small>Attack: {{oneWeapon.attack.display}}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

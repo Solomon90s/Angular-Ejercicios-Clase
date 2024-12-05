@@ -1,0 +1,58 @@
+<div class="flex justify-center">
+  <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold
+      py-2 px-4 rounded m-5 " (click)="ejemploBS()">
+    <!--Emitimos un valor con el observer cada vez que sea haga click al botón y se-->
+    <!--suma el valor del carrito en la navbar-->
+Click me! Soy un subject!
+</button>
+</div>
+<div class="flex justify-center font-bold">
+{{myBehaviorSubject | async}}
+</div>
+<div class="flex justify-between">
+<div (click)= "addCarritoPrice({nombre: 'Articulo 1', precio: 19.99})" class="hover:cursor-pointer max-w-sm rounded overflow-hidden shadow-lg ">
+  <img class="w-full" src="https://image.ondacero.es/clipping/cmsimages02/2023/03/17/4630AB54-C6D4-4FBE-9C8A-E2C6C3336CAA/imagen-archivo-mapache_103.jpg?crop=3111,2333,x275,y0&width=1200&height=900&optimize=low&format=webply" alt="Sunset in the mountains">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Mapache</div>
+    <p class="text-gray-700 text-base">
+      Pelaje gris tirando a negro, en ocasiones rojizo y marrón, aunque son la cola anillada y el “antifaz” en el rostro sus características físicas más reconocidas.
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">€19.99</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+  </div>
+</div>
+
+<div (click)= "addCarritoPrice({nombre: 'Articulo 2', precio: 19.99})" class="hover:cursor-pointer max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://images.ecestaticos.com/DHIosUuANTRcOBnXKcBI9APrhFQ=/0x0:2272x1275/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F473%2F8df%2F406%2F4738df4066b07cedbb2c9ae6d2bc13a0.jpg" alt="Sunset in the mountains">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Oso perezoso</div>
+    <p class="text-gray-700 text-base">
+      Animal solitario, nocturno y arborícola, que habita en la selva secundaria y desarrollada y en los bosques caducifolios.
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">€19.99</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+  </div>
+</div>
+
+<div (click)= "addCarritoPrice({nombre: 'Articulo 3', precio: 19.99})" class="hover:cursor-pointer max-w-sm rounded overflow-hidden shadow-lg">
+  <img class="w-full" src="https://www.lavanguardia.com/files/article_gallery_microformat/uploads/2022/08/09/62f285ac7d7a8.jpeg" alt="Sunset in the mountains">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2">Zarigüeya</div>
+    <p class="text-gray-700 text-base">
+      Una de las características de la zarigüeya son las franjas negras que nacen alrededor de sus ojos y se extienden hacia la nariz, lo que simula y aparenta ser un antifaz.
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">€19.99</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+  </div>
+</div>
+</div>
+

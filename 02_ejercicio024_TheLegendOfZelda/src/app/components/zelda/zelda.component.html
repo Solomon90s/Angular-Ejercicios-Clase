@@ -1,0 +1,29 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row mt-5" *ngIf="games">
+  <div class="col-lg-3" *ngFor="let game of games; let i = index">
+    <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Juegos Zelda</div>
+      <div class="card-body">
+        <h5 class="card-title">{{game.name}}</h5>
+        <p class="card-text">Developer: {{game.developer}}</p>
+        <p class="card-text">Publisher: {{game.publisher}}</p>
+        <p class="card-text">Release: {{game.released_date}}</p>
+        <div class="accordion acordeon" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      [attr.data-bs-target]="'#miAccordion'+i" aria-expanded="false" aria-controls="miAccordion">
+                Descripción:
+              </button>
+            </h2>
+            <div [attr.id]="'miAccordion'+i" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p>{{game.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

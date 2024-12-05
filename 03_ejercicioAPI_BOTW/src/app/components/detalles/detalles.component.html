@@ -1,0 +1,29 @@
+<div class="card mb-3 miCard" *ngIf="elementData">
+  <div class="row g-0">
+    <div class="col-md-4 col-xl-3">
+      <img [src]="elementData.image" class="card-img" alt="...">
+    </div>
+    <div class="col-md-4 col-xl-4">
+      <div class="card-body">
+        <h5 class="card-title text-uppercase text-center">{{ elementData.name }}</h5>
+        <p class="card-text">{{ elementData.description }}</p>
+        <p class="card-text">Hearts recovered<small class="text-muted"
+        > <br>
+          {{ elementData.hearts_recovered }}</small>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4 col-xl-4">
+      <div class="card-body">
+        <h5 class="card-title text-primary">Drops</h5>
+        <ul>
+          <li *ngFor="let drop of elementData.drops">{{ drop }}</li>
+        </ul>
+        <h5 class="card-title text-primary">Locations</h5>
+        <ul>
+          <li *ngFor="let location of elementData.common_locations">{{ location }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

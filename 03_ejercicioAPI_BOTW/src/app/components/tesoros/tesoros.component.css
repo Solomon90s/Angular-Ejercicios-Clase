@@ -1,0 +1,17 @@
+.miCard:hover{
+  transform: scale(105%);
+  transition-duration: 0.5s;
+  cursor: pointer;
+  border: solid 3px red;
+}
+.miCard{
+  box-shadow: 2px 4px 2px 4px rgba(0,0,0,0.75);
+}
+.mirow{
+  height: 100%;
+}
+.miH1{
+  font-family: "The Wild Breath of Zelda", serif;
+  font-size: 75px;
+  color: #917f04;
+}

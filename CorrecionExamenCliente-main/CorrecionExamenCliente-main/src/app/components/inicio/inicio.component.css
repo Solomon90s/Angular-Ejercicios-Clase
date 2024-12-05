@@ -1,0 +1,5 @@
+img:hover{
+  cursor:pointer;
+  box-shadow: 2px 2px 2px 2px blue, -2px -2px 2px 2px blue;
+  transform:scale(102%);
+}

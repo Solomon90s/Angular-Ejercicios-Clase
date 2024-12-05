@@ -1,0 +1,46 @@
+<div class="row my-3">
+
+<div *ngFor="let res of infoOne.data.results">
+  <div class="col-4">
+    <div *ngFor="let img of res.images" >
+      <img [src]="img.path+'.jpg'" alt="">
+
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header text-primary">
+        Descripcion
+      </div>
+      <div class="card-body">
+
+        <p class="card-text">{{res.description}}</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header bg-primary text-dark">
+        INFO
+      </div>
+      <div class="card-body">
+
+        <p class="card-text"><strong>pageCount</strong> {{res.pageCount}}</p>
+        <p class="card-text"><strong>Formate</strong> {{res.format}}</p>
+        <p class="card-text"><strong>sale date</strong> {{res.dates[0].date}}</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+

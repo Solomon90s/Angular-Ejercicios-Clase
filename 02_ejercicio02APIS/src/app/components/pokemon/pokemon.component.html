@@ -1,0 +1,51 @@
+<!-- CON EL NGIF LE DECIMOS QUE MIENTRAS CARGA LA INFO DE LA API-->
+<div class="row">
+  <div class="col-lg-12 col-xl-12">
+    <h1 class="mt-5" *ngIf="apiData">Hay un total de {{ apiData.totalCount }} cartas pokemon en esta API</h1>
+  </div>
+</div>
+<div class="row mt-3 justify-content-center">
+  <div class="col-6 offset-2" *ngIf="apiData">
+    <!-- Llamamos a la paginacion con, <ngb-pagination</ngb-pagination>-->
+    <!-- BANANA ON THE BOX, [()], doble enlace de datos. Voy a vincular la variable page(que tengo en el typescript), con el objeto ngb-pagination.-->
+    <!-- BANANA ON THE BOX, [()], Cuando yo modifique el HTML se modificará el valor en el typescript y viceversa  .-->
+
+    <!-- [(page)] = "page", que lo vinculamos con nuestra variable page -->
+    <!-- [pageSize]="20", tamaño de pagina-->
+    <!-- [collectionSize]="dataApi.valorant.count", donde cogemos la información-->
+    <!-- [maxSize]="3", numero total de elementos que voy a poner de corrido -->
+    <!-- [rotate]="true", -->
+    <!-- [boundaryLinks] ="true", flechas de avanzar e ir atras-->
+    <!-- (pageChange)="loadCharacters()">,el evento (pageChange) llama a la funcion loadCharacters() y muestra los nuevos elementos-->
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="apiData.pageSize"
+      [collectionSize]="apiData.totalCount"
+      [maxSize]="5"
+      [boundaryLinks]="true"
+      (pageChange)="loadPokemons()">
+    </ngb-pagination>
+  </div>
+  <div class="col-2">
+    <div class="me-2">Page Size</div>
+    <select class="form-select" (change)="updatePageSize($event)">
+      <option value="12">12</option>
+      <option value="15">15</option>
+      <option value="18">18</option>
+      <option value="21">21</option>
+      <option value="24">24</option>
+    </select>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col-lg-4 col-xxl-4" *ngFor="let pokemon of pokemons">
+    <div class="card my-3 miCard" [routerLink]="'/info-pokemon/'+pokemon.id">
+      <div class="card-header text-center bg-secondary-subtle">
+        <div class="card-title">
+          <h3 class="text-primary">{{ pokemon.name }}</h3>
+        </div>
+      </div>
+      <img [src]="pokemon.images.small" class="card-img-top" [alt]="pokemon.name">
+    </div>
+  </div>
+</div>

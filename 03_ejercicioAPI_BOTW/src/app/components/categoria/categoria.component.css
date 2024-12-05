@@ -1,0 +1,8 @@
+.miCard:hover{
+  transform: scale(110%);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.columna{
+  margin-top: 75px;
+}
